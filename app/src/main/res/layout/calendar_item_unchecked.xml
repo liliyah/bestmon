@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:paddingRight="15dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:id="@+id/linear_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="اليوم"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/text_calendar_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:textColor="@color/purple_700"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imagechecked_unchecked"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignRight="@id/relative"
+android:layout_marginTop="22dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/unchecked" />
+</RelativeLayout>
