@@ -26,17 +26,13 @@ import java.util.List;
 public class CalenderFragment  extends Fragment {
 private RecyclerView recyclerView;
 private CalenderAdapter madapter;
-    private ViewModelData viewModelData;
+private ViewModelData viewModelData;
 private List<DataModel>  datamodels = new ArrayList<>();
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_calender,container,false);
-
-
-
         recyclerView = (RecyclerView) v.findViewById(R.id.calendar_recycler);
-
         return v;
     }
 
@@ -44,7 +40,7 @@ private List<DataModel>  datamodels = new ArrayList<>();
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         viewModelData = ViewModelProviders.of(getActivity()).get(ViewModelData.class);
-viewModelData.getAllProgressData().observe(getViewLifecycleOwner(), new Observer<List<DataModel>>() {
+        viewModelData.getAllProgressData().observe(getViewLifecycleOwner(), new Observer<List<DataModel>>() {
     @Override
     public void onChanged(List<DataModel> dataModels) {
         madapter= new CalenderAdapter(dataModels,getContext());

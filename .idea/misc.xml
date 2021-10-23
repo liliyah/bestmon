@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Sara/AndroidStudioProjects/bestmom/app/src/main/res/drawable-v24/buttom_round_rect.xml" value="0.1675925925925926" />
+        <entry key="..\:/Users/Sara/AndroidStudioProjects/bestmom/app/src/main/res/drawable-v24/light_blue_bg.xml" value="0.17037037037037037" />
         <entry key="..\:/Users/Sara/AndroidStudioProjects/bestmom/app/src/main/res/drawable-v24/light_skin_bg.xml" value="0.1046875" />
+        <entry key="..\:/Users/Sara/AndroidStudioProjects/bestmom/app/src/main/res/drawable-v24/lightpista.xml" value="0.1648148148148148" />
         <entry key="..\:/Users/Sara/AndroidStudioProjects/bestmom/app/src/main/res/drawable-v24/task_checkbox.xml" value="0.15462962962962962" />
         <entry key="..\:/Users/Sara/AndroidStudioProjects/bestmom/app/src/main/res/drawable/blue_dot.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/Sara/AndroidStudioProjects/bestmom/app/src/main/res/drawable/buttom_round_rect.xml" value="0.20833333333333334" />

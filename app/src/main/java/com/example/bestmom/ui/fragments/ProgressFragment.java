@@ -27,8 +27,7 @@ import com.example.bestmom.ui.models.DataModel;
 import java.util.List;
 
 public class ProgressFragment  extends Fragment {
-
-   private ImageView button_forwards;
+    private ImageView button_forwards;
     private ImageView button_backwards;
     private RelativeLayout relativeLayout;
     private int j = 0;
@@ -58,8 +57,6 @@ public class ProgressFragment  extends Fragment {
         button_forwards =(ImageView)v.findViewById(R.id.btn_forward);
         return v;
     }
-
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -125,14 +122,14 @@ public class ProgressFragment  extends Fragment {
                     @Override
                     public void onClick(View view) {
 
-                        if (m_taskDoneCheck.isChecked() == false && m_task_notDone_Check.isChecked() == false) {
-                            Toast t = Toast.makeText(getActivity(), "يجب اختيار مهمه اليوم", Toast.LENGTH_SHORT);
-                            LinearLayout toastLayout = (LinearLayout) t.getView();
-                            TextView toastTv = (TextView) toastLayout.getChildAt(0);
-                            toastTv.setTextSize(25);
-                            t.show();
+                        if(dataModels.get(j).getIs_task_done()==1 && dataModels.get(j).getIs_task_not_done()==0){
+                            m_taskDoneCheck.setChecked(true);
 
-                        } else {
+                        }
+                        if(dataModels.get(j).getIs_task_done()==0 && dataModels.get(j).getIs_task_not_done()==1){
+                            m_task_notDone_Check.setChecked(true);
+                        }
+
                             relativeLayout.setBackground(getActivity().getDrawable(myimageList[i]));
                             if (i == (int) myimageList.length - 1) {
                                 i = 0;
@@ -146,19 +143,17 @@ public class ProgressFragment  extends Fragment {
                             }else{
                                 j--;
                             }
-                            Toast.makeText(getActivity(), "mday is"+j, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getActivity(), "mday is"+j, Toast.LENGTH_SHORT).show();
                             mDate_textView.setText(String.valueOf(j));
                             mProgressTextView.setText(String.valueOf(dataModels.get(j).getProgress_Name()));
-
-                            if (m_taskDoneCheck.isChecked() == true && m_task_notDone_Check.isChecked() == false){
-                                viewModelData.UpdateProgressData(1,0,j);
-                            }
-                            if (m_taskDoneCheck.isChecked() == false && m_task_notDone_Check.isChecked() == true){
-                                viewModelData.UpdateProgressData(0,1,j);
-                            }
-
+                        if (m_taskDoneCheck.isChecked() == true && m_task_notDone_Check.isChecked() == false){
+                            viewModelData.UpdateProgressData(1,0,j);
                         }
-                    }
+                        if (m_taskDoneCheck.isChecked() == false && m_task_notDone_Check.isChecked() == true){
+                            viewModelData.UpdateProgressData(0,1,j);
+                        }
+                                                    }
+
                 });
             }
         });
