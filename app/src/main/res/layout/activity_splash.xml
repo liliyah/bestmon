@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/rainbowblue"
+    android:shadowColor="#FFBB86FC"
+    android:shadowDx="0"
+    android:shadowDy="0"
+    android:shadowRadius="6"
     android:layout_height="match_parent"
-    tools:context=".ui.SplashActivity">
+    tools:context="my.mummyapp.bestmom.ui.SplashActivity">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/momandbaby"
-        android:layout_width="wrap_content"
-        android:layout_height="650dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:lottie_autoPlay="true"
         app:lottie_fileName="73796-mombabies.json"
         app:lottie_loop="true">
@@ -21,7 +25,8 @@
         android:id="@+id/text_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/momandbaby"
+        android:layout_marginTop="100dp"
+        android:paddingRight="10dp"
         android:shadowColor="#ffffff"
         android:shadowDx="0"
         android:shadowDy="0"
@@ -29,7 +34,6 @@
         android:text="@string/be_abettermom"
         android:textAlignment="center"
         android:textColor="@color/purple_500"
-        android:textSize="50dp"
+        android:textSize="40sp"
         android:textStyle="bold" />
-
-</RelativeLayout>
+</FrameLayout>

@@ -17,8 +17,24 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:fontFamily">default</item>
     </style>
-    <style name="CusTomTabtext" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
-        <item name="android:textSize">18sp</item>
-    </style>
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
 
+        <item name="tabTextAppearance">@style/CusTomTabtext</item>
+
+    </style>
+    <style name="CusTomTabtext" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/pink</item>
+
+    </style>
+<style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorAccent">@color/pink</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+
+
+</style>
+
+    <dimen name="tab_max_width">12dp</dimen>
 </resources>

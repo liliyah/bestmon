@@ -3,6 +3,7 @@
     android:layout_width="100dp"
     android:layout_height="80dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <RelativeLayout
         android:id="@+id/relative"
         android:layout_width="100dp"
@@ -15,12 +16,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="20dp">
+
             <LinearLayout
                 android:id="@+id/linear_cardview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

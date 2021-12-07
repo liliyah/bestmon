@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="300dp"
+    android:layout_height="370dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="350dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="302dp">
+            android:layout_marginTop="5dp"
+
+            android:paddingRight="15dp"
+            android:layout_height="330dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview"
-                app:cardCornerRadius="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="320dp"
+                app:cardCornerRadius="20dp">
 
                 <TextView
+                    android:id="@+id/text1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="150dp"
+                    android:paddingRight="10dp"
                     android:text="راىع جدا هذا التطور بقد قمت بعمل مذهل لتحسين علاقتك بطفلك "
-                    android:textColor="@color/pink"
-                    android:textSize="30dp"
+                    android:textColor="@color/black"
+                    android:shadowColor="@color/pink"
+                    android:shadowDx="1.5"
+                    android:shadowDy="1.3"
+                    android:shadowRadius="1.6"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -32,59 +38,58 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:paddingTop="20dp"
-                    android:src="@drawable/greatarabic" />
+                    android:src="@drawable/pic" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:outlineAmbientShadowColor="@color/purple_200" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="250dp"
-                    android:textColor="@color/pink"
+                    android:paddingRight="10dp"
                     android:text="لو عجبك تطبقنا قم بمشاركته كى تعم الفائدة "
-                    android:textSize="30dp"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/pink"
+                    android:shadowColor="@color/pink"
+                    android:shadowDx="1.5"
+                    android:shadowDy="1.3"
+                    android:shadowRadius="1.6"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/Buttons_cancel"
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="295dp"
-                android:src="@drawable/facebook" />
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="270dp"
+        android:src="@drawable/unchecked" />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="290dp"
-                android:src="@drawable/whatsappicon" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="295dp"
-                android:src="@drawable/messagered" />
+        <ImageView
+            android:id="@+id/facebook_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="295dp"
+            android:src="@drawable/facebookpng" />
 
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/whatsapp_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="290dp"
+            android:src="@drawable/whatsappng" />
+
+
+    </LinearLayout>
     </RelativeLayout>
-<ImageView
-    android:layout_width="50dp"
-    android:src="@drawable/unchecked"
-    android:layout_marginLeft="360dp"
-    android:layout_height="50dp"/>
-    </RelativeLayout>
+
